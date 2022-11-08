@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next";
-import { Wrapper, Title, Icon, WrapperIcon } from "./styled";
+import { Wrapper, Title, Icon, IconWrapper } from "./styled";
 
 const loadContent = () => {
   const { t } = useTranslation("banner");
@@ -53,11 +53,11 @@ const Banner = () => {
   return (
     <Wrapper>
       <Title>{title}</Title>
-      <WrapperIcon>
+      <IconWrapper>
         {icons?.map((icon, index) => (
           <Icon key={index} {...icon} />
         ))}
-      </WrapperIcon>
+      </IconWrapper>
     </Wrapper>
   );
 };

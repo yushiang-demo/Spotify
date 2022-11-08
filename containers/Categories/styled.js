@@ -18,25 +18,19 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 600;
   font-size: 28px;
-  line-height: 45px;
   letter-spacing: -0.02em;
-  font-feature-settings: "salt" on, "liga" off;
   color: #020d37;
   padding-bottom: 23px;
 
   ${ISTABLET} {
     font-size: 24px;
-    line-height: 160%;
     padding-bottom: 20px;
   }
 
   ${ISPHONE} {
     font-size: 20px;
-    line-height: 30px;
     padding-bottom: 20px;
   }
 `;
@@ -55,7 +49,7 @@ export const KeepRatioWrapper = styled.div`
   }
 `;
 
-export const WrapperCategories = styled(Status)`
+export const CategoriesWrapper = styled(Status)`
   /* retain ratio*/
   position: absolute;
   top: 0;
@@ -76,16 +70,12 @@ export const WrapperCategories = styled(Status)`
   }
 `;
 export const More = styled.div`
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  line-height: 24px;
   display: flex;
   align-items: center;
   letter-spacing: -0.01em;
   text-decoration-line: underline;
-  font-feature-settings: "salt" on, "liga" off;
   color: #0432df;
   padding-top: 20px;
 

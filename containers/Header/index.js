@@ -5,7 +5,7 @@ import {
   Subtitle,
   Footer,
   SeeMusic,
-  WrapperDescroptions,
+  DescroptionsWrapper,
 } from "./styled";
 import Menu from "./Menu";
 import Search from "./Search";
@@ -78,7 +78,7 @@ const Header = () => {
   return (
     <Wrapper {...descriptions?.backgroundImage}>
       <Menu {...menu} />
-      <WrapperDescroptions>
+      <DescroptionsWrapper>
         <Title>{descriptions?.title}</Title>
         <Subtitle>{descriptions?.subtitle}</Subtitle>
         <Search {...search} />
@@ -86,7 +86,7 @@ const Header = () => {
           {descriptions?.footer}
           <SeeMusic>{descriptions?.seeMusic}</SeeMusic>
         </Footer>
-      </WrapperDescroptions>
+      </DescroptionsWrapper>
     </Wrapper>
   );
 };

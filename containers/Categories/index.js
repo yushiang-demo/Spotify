@@ -3,7 +3,7 @@ import {
   Title,
   Wrapper,
   More,
-  WrapperCategories,
+  CategoriesWrapper,
   KeepRatioWrapper,
 } from "./styled";
 import { useEffect } from "react";
@@ -35,7 +35,7 @@ const Categories = ({ visibleCount = 12 }) => {
     <Wrapper>
       <Title>{title}</Title>
       <KeepRatioWrapper>
-        <WrapperCategories isLoading={isLoading} errorMessage={error?.message}>
+        <CategoriesWrapper isLoading={isLoading} errorMessage={error?.message}>
           {categories?.items &&
             [...Array(visibleCount)].map((_, index) => {
               if (categories?.items[index]) {
@@ -50,7 +50,7 @@ const Categories = ({ visibleCount = 12 }) => {
                 return null;
               }
             })}
-        </WrapperCategories>
+        </CategoriesWrapper>
       </KeepRatioWrapper>
       <More>{more}</More>
     </Wrapper>

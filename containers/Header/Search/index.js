@@ -3,16 +3,16 @@ import {
   SearchIcon,
   TextInput,
   SearchHint,
-  WrapperSearchBox,
+  SearchBoxWrapper,
 } from "./styled";
 
 const Search = ({ icon, placeHolder, hint }) => {
   return (
     <Wrapper>
-      <WrapperSearchBox>
+      <SearchBoxWrapper>
         <SearchIcon {...icon} />
         <TextInput placeholder={placeHolder} />
-      </WrapperSearchBox>
+      </SearchBoxWrapper>
       <SearchHint>{hint}</SearchHint>
     </Wrapper>
   );

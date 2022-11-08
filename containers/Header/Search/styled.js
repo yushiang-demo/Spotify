@@ -17,7 +17,7 @@ export const SearchIcon = styled(Icon)`
   margin: 18.5px 10px 18.5px 20px;
 `;
 
-export const WrapperSearchBox = styled.div`
+export const SearchBoxWrapper = styled.div`
   background: #eeeeee;
   border-radius: 8px;
 
@@ -45,13 +45,9 @@ export const TextInput = styled.input.attrs({
 `;
 
 export const SearchHint = styled.div`
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 172%;
   letter-spacing: -0.05em;
-  font-feature-settings: "salt" on, "liga" off;
   color: #eeeeee;
 
   padding-top: 10px;

@@ -1,8 +1,8 @@
 import { useTranslation } from "next-i18next";
 import {
   Wrapper,
-  WrapperDescriptions,
-  WrapperMenus,
+  DescriptionsWrapper,
+  MenusWrapper,
   Logo,
   Introduction,
   CopyRight,
@@ -57,16 +57,16 @@ const Footer = () => {
   const { descriptions, items } = loadContent();
   return (
     <Wrapper>
-      <WrapperDescriptions>
+      <DescriptionsWrapper>
         <Logo {...descriptions?.logo} />
         <Introduction>{descriptions?.introduction}</Introduction>
         <CopyRight>{descriptions?.copyRight}</CopyRight>
-      </WrapperDescriptions>
-      <WrapperMenus>
+      </DescriptionsWrapper>
+      <MenusWrapper>
         {items?.map((item, index) => (
           <Menu key={index} {...item} />
         ))}
-      </WrapperMenus>
+      </MenusWrapper>
     </Wrapper>
   );
 };

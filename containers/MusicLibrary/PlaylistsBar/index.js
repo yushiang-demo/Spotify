@@ -1,10 +1,10 @@
 import {
   Wrapper,
   Item,
-  WrapperPlayList,
+  PlayListWrapper,
   FilterText,
   FilterIcon,
-  WrapperFilter,
+  FilterWrapper,
 } from "./styled";
 
 const PlaylistsBar = ({
@@ -17,7 +17,7 @@ const PlaylistsBar = ({
 }) => {
   return (
     <Wrapper>
-      <WrapperPlayList isLoading={isLoading} errorMessage={error?.message}>
+      <PlayListWrapper isLoading={isLoading} errorMessage={error?.message}>
         {!isLoading &&
           items?.map((item, index) => {
             const { id, name } = item;
@@ -31,11 +31,11 @@ const PlaylistsBar = ({
               </Item>
             );
           })}
-      </WrapperPlayList>
-      <WrapperFilter>
+      </PlayListWrapper>
+      <FilterWrapper>
         <FilterText>{filterIcon?.text}</FilterText>
         <FilterIcon {...filterIcon} />
-      </WrapperFilter>
+      </FilterWrapper>
     </Wrapper>
   );
 };

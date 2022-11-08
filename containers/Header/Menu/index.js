@@ -2,8 +2,8 @@ import {
   Wrapper,
   Logo,
   DropDownMenu,
-  ItemContainer,
-  LinkContainer,
+  ItemsWrapper,
+  LinksWrapper,
   Item,
   LiteMenu,
   Login,
@@ -16,17 +16,17 @@ const Menu = ({ logo, items, liteModeIcon, login }) => {
       <Logo {...logo} />
       <DropDownMenu>
         <LiteMenu {...liteModeIcon} tabIndex="0" />
-        <ItemContainer>
+        <ItemsWrapper>
           <CloseMenu />
-          <LinkContainer tabIndex="0">
+          <LinksWrapper tabIndex="0">
             {items?.map((item, index) => (
               <Item key={index} {...item}>
                 {item?.name}
               </Item>
             ))}
             <Login>{login}</Login>
-          </LinkContainer>
-        </ItemContainer>
+          </LinksWrapper>
+        </ItemsWrapper>
       </DropDownMenu>
     </Wrapper>
   );

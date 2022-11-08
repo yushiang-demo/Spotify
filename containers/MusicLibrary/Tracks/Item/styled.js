@@ -12,17 +12,11 @@ export const Wrapper = styled.div`
 `;
 
 export const MusicName = styled.div`
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 138%;
-  /* identical to box height, or 22px */
-
   display: flex;
   align-items: center;
   letter-spacing: -0.05em;
-  font-feature-settings: "salt" on, "liga" off;
   color: #020d37;
 
   ${ISTABLET} {
@@ -30,13 +24,9 @@ export const MusicName = styled.div`
   }
 `;
 export const MusicTime = styled.div`
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 172%;
   letter-spacing: -0.05em;
-  font-feature-settings: "salt" on, "liga" off;
   color: #4c526a;
 `;
 export const NameWrapper = styled.div`
@@ -52,15 +42,11 @@ export const NameWrapper = styled.div`
 `;
 
 export const AlbumName = styled.div`
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 138%;
   display: flex;
   align-items: center;
   letter-spacing: -0.05em;
-  font-feature-settings: "salt" on, "liga" off;
   color: #4c526a;
   flex-basis: 25%;
   flex: 1;
@@ -70,15 +56,11 @@ export const AlbumName = styled.div`
   }
 `;
 export const ArtistName = styled.div`
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 138%;
   display: flex;
   align-items: center;
   letter-spacing: -0.05em;
-  font-feature-settings: "salt" on, "liga" off;
   color: #4c526a;
   flex-basis: 25%;
   flex: 1;

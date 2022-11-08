@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const WrapperTitle = styled.div`
+export const TitleWrapper = styled.div`
   width: fit-content;
   flex-basis: 30%;
   padding: 0px 0px 49px 100px;
@@ -29,7 +29,7 @@ export const WrapperTitle = styled.div`
     padding: 0px 28px 55px 28px;
   }
 `;
-export const WrapperItems = styled.div`
+export const ItemsWrapper = styled.div`
   flex-basis: 60%;
   justify-content: space-between;
 

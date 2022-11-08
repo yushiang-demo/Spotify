@@ -1,13 +1,13 @@
-import { Wrapper, Icon, Title, Content, WrapperItems } from "./styled";
+import { Wrapper, Icon, Title, Content, ItemsWrapper } from "./styled";
 
 const WhyusItem = ({ icon, title, content }) => {
   return (
     <Wrapper>
-      <WrapperItems>
+      <ItemsWrapper>
         <Icon url={icon} />
         <Title>{title}</Title>
         <Content>{content}</Content>
-      </WrapperItems>
+      </ItemsWrapper>
     </Wrapper>
   );
 };

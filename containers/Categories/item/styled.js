@@ -20,17 +20,12 @@ export const Wrapper = styled.div`
 `;
 
 export const Text = styled.div`
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  line-height: 172%;
   letter-spacing: -0.05em;
-  font-feature-settings: "salt" on, "liga" off;
   color: #eeeeee;
   padding: 15%;
   ${ISPHONE} {
     font-size: 16px;
-    line-height: 138%;
   }
 `;

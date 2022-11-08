@@ -3,8 +3,8 @@ import {
   Wrapper,
   Title,
   Subtitle,
-  WrapperTestimonials,
-  WrapperDot,
+  TestimonialsWrapper,
+  DotWrapper,
   Dot,
 } from "./styled";
 import Testimonial from "./Testimonial";
@@ -66,16 +66,16 @@ const Experience = () => {
     <Wrapper>
       <Title>{descriptions?.title}</Title>
       <Subtitle>{descriptions?.subtitle}</Subtitle>
-      <WrapperTestimonials>
+      <TestimonialsWrapper>
         {testimonials?.map((post, index) => (
           <Testimonial key={index} {...post} />
         ))}
-      </WrapperTestimonials>
-      <WrapperDot>
+      </TestimonialsWrapper>
+      <DotWrapper>
         {testimonials?.map((_, index) => (
           <Dot key={index} />
         ))}
-      </WrapperDot>
+      </DotWrapper>
     </Wrapper>
   );
 };

@@ -11,14 +11,10 @@ export const Wrapper = styled.div`
 export const Logo = styled(Icon)``;
 
 export const Item = styled.div`
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 24px;
   text-align: center;
   letter-spacing: -0.01em;
-  font-feature-settings: "salt" on, "liga" off;
   color: #ffffff;
 
   padding: 8px 36px;
@@ -47,7 +43,6 @@ export const CloseMenu = styled(Item)`
 export const Login = styled(Item)`
   font-weight: 600;
   font-size: 14px;
-  line-height: 24px;
   letter-spacing: -0.01em;
 
   background: #0432df;
@@ -62,7 +57,7 @@ export const Login = styled(Item)`
   }
 `;
 
-export const ItemContainer = styled.div`
+export const ItemsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: auto;
@@ -76,7 +71,7 @@ export const ItemContainer = styled.div`
   }
 `;
 
-export const LinkContainer = styled.div`
+export const LinksWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -90,7 +85,7 @@ export const DropDownMenu = styled.div`
   margin-left: auto;
 
   &:focus-within {
-    > ${ItemContainer} {
+    > ${ItemsWrapper} {
       display: flex;
     }
   }

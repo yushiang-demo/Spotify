@@ -7,14 +7,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 600;
   font-size: 20px;
-  line-height: 30px;
   text-align: center;
   letter-spacing: -0.02em;
-  font-feature-settings: "salt" on, "liga" off;
   color: #020d37;
 
   padding: 0px 0px 35px 0px;
@@ -28,7 +24,7 @@ export const Title = styled.div`
   }
 `;
 
-export const WrapperIcon = styled.div`
+export const IconWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;

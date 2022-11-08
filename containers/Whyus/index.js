@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next";
 
-import { Wrapper, WrapperTitle, WrapperItems } from "./styled";
+import { Wrapper, TitleWrapper, ItemsWrapper } from "./styled";
 import WhyusTitle from "./title";
 import WhyusItem from "./item";
 
@@ -39,14 +39,14 @@ const Whyus = () => {
   const { title, items } = loadContent();
   return (
     <Wrapper>
-      <WrapperTitle>
+      <TitleWrapper>
         <WhyusTitle {...title}></WhyusTitle>
-      </WrapperTitle>
-      <WrapperItems>
+      </TitleWrapper>
+      <ItemsWrapper>
         {items?.map((item, index) => (
           <WhyusItem key={index} {...item} />
         ))}
-      </WrapperItems>
+      </ItemsWrapper>
     </Wrapper>
   );
 };

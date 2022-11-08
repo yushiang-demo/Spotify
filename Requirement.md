@@ -18,7 +18,7 @@
     - [X] Plan
     - [X] User experience
     - [X] Footer
-    - [ ] Error/Loading
+    - [X] Error/Loading
 
 - Functions
     - [X] Spotify API

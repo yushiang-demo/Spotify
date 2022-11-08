@@ -39,7 +39,6 @@ const loadContent = () => {
 
 const Plan = () => {
   const { descriptions, plans } = loadContent();
-  console.log(descriptions, plans);
   return (
     <Wrapper>
       <Title>{descriptions.title}</Title>
