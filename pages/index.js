@@ -32,7 +32,7 @@ export default function App({ token, error }) {
   );
 }
 
-export async function getStaticProps({ res, locale }) {
+export async function getServerSideProps({ res, locale }) {
   const languges = await serverSideTranslations(locale, [
     "header",
     "banner",
