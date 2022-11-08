@@ -1,6 +1,4 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-import * as cookie from "../helper/cookie";
 import Header from "../containers/Header";
 import Banner from "../containers/Banner";
 import MusicLibrary from "../containers/MusicLibrary";
@@ -9,15 +7,17 @@ import Whyus from "../containers/Whyus";
 import Plan from "../containers/Plan";
 import Experiences from "../containers/Experiences";
 import Footer from "../containers/Footer";
-import { ErrorBox } from "../styles/Error";
+import * as cookie from "../helper/cookie";
+import { useRouter } from "next/router";
 
-export default function App({ token, error }) {
-  if (error) console.warn(error);
-  else cookie.setToken(token);
-
+export default function App() {
+  const router = useRouter();
+  const { token } = router.query;
+  if (token) {
+    cookie.setToken(token);
+  }
   return (
     <>
-      {!!error && <ErrorBox {...error} />}
       <Header />
       <Banner />
       <MusicLibrary />
@@ -41,10 +41,5 @@ export async function getStaticProps({ locale }) {
     "experiences",
     "footer",
   ]);
-
-  const error = {
-    message:
-      "Server-side get token error. Check your id and serect in .env file.",
-  };
-  return { props: { ...languges, error } };
+  return { props: { ...languges } };
 }
