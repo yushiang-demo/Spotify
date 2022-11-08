@@ -44,9 +44,9 @@ export async function getStaticProps({ res, locale }) {
     "footer",
   ]);
   res.setHeader(
-    'Cache-Control',
-    'no-cache, no-store, max-age=0, must-revalidate'
-  )
+    "Cache-Control",
+    "no-cache, no-store, max-age=0, must-revalidate"
+  );
   try {
     const token = await getSpotifyToken(
       process.env.SPOTIFY_CLIENT_ID,
