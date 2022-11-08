@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ISTABLET, ISPHONE } from "../../styles/RWD";
+import { Status } from "../../styles/Status";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -43,18 +44,18 @@ export const Title = styled.div`
 export const KeepRatioWrapper = styled.div`
   position: relative;
   width: 100%;
-  padding-top: 24%; /* 1024:250 Aspect Ratio */
+  padding-top: 33.3%; /* 6:2 Aspect Ratio */
 
   ${ISTABLET} {
-    padding-top: 45%; /* 648:294 Aspect Ratio */
+    padding-top: 75%; /* 4:3 Aspect Ratio */
   }
 
   ${ISPHONE} {
-    padding-top: 163%; /* 288:470 Aspect Ratio */
+    padding-top: 300%; /* 2:6 Aspect Ratio */
   }
 `;
 
-export const WrapperCategories = styled.div`
+export const WrapperCategories = styled(Status)`
   /* retain ratio*/
   position: absolute;
   top: 0;
@@ -64,19 +65,14 @@ export const WrapperCategories = styled.div`
 
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
-  grid-row-gap: 20px;
-  grid-column-gap: 16px;
+  gap:10px;
 
   ${ISTABLET} {
-    grid-template-columns: auto auto auto auto;
-    grid-row-gap: 16px;
-    grid-column-gap: 12px;
+    grid-template-columns: auto auto auto auto;]
   }
 
   ${ISPHONE} {
     grid-template-columns: auto auto;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
   }
 `;
 export const More = styled.div`

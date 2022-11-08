@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { ISPHONE, ISTABLET } from "../../../styles/RWD";
 import { Icon } from "../../../styles/Icon";
+import { Status } from "../../../styles/Status";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -33,11 +34,12 @@ export const FilterText = styled.div`
 `;
 export const FilterIcon = styled(Icon)``;
 
-export const WrapperPlayList = styled.div`
+export const WrapperPlayList = styled(Status)`
   display: flex;
   flex-direction: row;
   overflow: hidden;
   width: 60%;
+  height: 50px;
 
   ${ISTABLET} {
     width: 80%;

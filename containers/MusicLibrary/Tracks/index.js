@@ -1,12 +1,40 @@
+import { useDispatch, useSelector } from "react-redux";
 import { Wrapper } from "./styled";
 import Track from "./Item";
+import { playTrack, stopTrack } from "../../../redux/actions/tracks";
 
-const Tracks = ({ items }) => {
+const Tracks = ({ items, isLoading, error }) => {
+  const currentTrackId = useSelector((state) => state.tracks.currentTrackId);
+  const dispatch = useDispatch();
+
+  const playFactory = (id) => {
+    return () => {
+      dispatch(playTrack(id));
+    };
+  };
+
+  const stop = () => {
+    dispatch(stopTrack());
+  };
+
   return (
-    <Wrapper>
-      {items?.map((item, index) => (
-        <Track key={index} {...item} />
-      ))}
+    <Wrapper isLoading={isLoading} errorMessage={error?.message}>
+      {!isLoading &&
+        items?.map((item, index) => {
+          // track's preview_url from spotify api is not existed
+          if (item?.track?.preview_url) {
+            return (
+              <Track
+                key={index}
+                {...item}
+                isPlaying={item?.track.id === currentTrackId}
+                play={playFactory(item?.track.id)}
+                stop={stop}
+              />
+            );
+          }
+          return null;
+        })}
     </Wrapper>
   );
 };

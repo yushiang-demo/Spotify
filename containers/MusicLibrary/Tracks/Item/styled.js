@@ -91,10 +91,6 @@ export const ArtistName = styled.div`
   }
 `;
 
-export const IconMusic = styled(Icon)`
-  margin: 28px;
-`;
-
 export const IconWrapper = styled.div`
   display: flex;
   flex-direction: row;

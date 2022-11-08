@@ -1,6 +1,7 @@
 import produce from "immer";
 import {
   ACTION_GET_FEATURED_PLAYLISTS,
+  ACTION_GET_PLAYLISTS_BY_ID,
   ACTION_GET_PLAYLISTS_FAL,
   ACTION_GET_PLAYLISTS_SUC,
   ACTION_SET_CURRENT_PLAYLISTID,
@@ -17,6 +18,7 @@ const playlists = (state = initialState, action) =>
   produce(state, (draft) => {
     switch (action.type) {
       case ACTION_GET_FEATURED_PLAYLISTS:
+      case ACTION_GET_PLAYLISTS_BY_ID:
         draft.isLoading = true;
         break;
       case ACTION_GET_PLAYLISTS_SUC:

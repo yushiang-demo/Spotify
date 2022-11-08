@@ -18,8 +18,9 @@ const Categories = ({ visibleCount = 12 }) => {
   const more = t("more");
 
   const dispatch = useDispatch();
-  const { categories } = useSelector((state) => state.categories);
-
+  const { categories, isLoading, error } = useSelector(
+    (state) => state.categories,
+  );
   useEffect(() => {
     dispatch(fetchCategories());
   }, []);
@@ -34,7 +35,7 @@ const Categories = ({ visibleCount = 12 }) => {
     <Wrapper>
       <Title>{title}</Title>
       <KeepRatioWrapper>
-        <WrapperCategories>
+        <WrapperCategories isLoading={isLoading} errorMessage={error?.message}>
           {categories?.items &&
             [...Array(visibleCount)].map((_, index) => {
               if (categories?.items[index]) {

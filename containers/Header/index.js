@@ -4,6 +4,7 @@ import {
   Title,
   Subtitle,
   Footer,
+  SeeMusic,
   WrapperDescroptions,
 } from "./styled";
 import Menu from "./Menu";
@@ -21,7 +22,7 @@ const loadContent = () => {
     title: t("title"),
     subtitle: t("subtitle"),
     footer: t("footer"),
-    more: t("more"),
+    seeMusic: t("more"),
   };
 
   const menu = {
@@ -81,7 +82,10 @@ const Header = () => {
         <Title>{descriptions?.title}</Title>
         <Subtitle>{descriptions?.subtitle}</Subtitle>
         <Search {...search} />
-        <Footer more={descriptions?.more}>{descriptions?.footer}</Footer>
+        <Footer>
+          {descriptions?.footer}
+          <SeeMusic>{descriptions?.seeMusic}</SeeMusic>
+        </Footer>
       </WrapperDescroptions>
     </Wrapper>
   );

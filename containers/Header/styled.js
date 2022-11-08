@@ -22,7 +22,7 @@ export const Title = styled.div`
   font-feature-settings: "salt" on, "liga" off;
   color: #eeeeee;
 
-  padding: 16px;
+  padding: 95px 0px 16px 0px;
 
   ${ISPHONE} {
     font-size: 20px;
@@ -65,16 +65,11 @@ export const Footer = styled.div`
   color: #eeeeee;
 
   padding: 0px 30px;
+`;
 
-  ${(props) =>
-    props.more &&
-    css`
-      &:after {
-        padding-left: 5px;
-        content: "${props.more}";
-        text-decoration: underline;
-      }
-    `}
+export const SeeMusic = styled.span`
+  padding-left: 5px;
+  text-decoration: underline;
 `;
 
 export const WrapperDescroptions = styled.div`

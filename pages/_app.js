@@ -1,6 +1,7 @@
 import { appWithTranslation } from "next-i18next";
 import { Provider } from "react-redux";
 import Head from "next/head";
+import "../styles/body.css";
 import store from "../config/configureStore";
 
 function MyApp({ Component, pageProps }) {
@@ -8,10 +9,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Final Test Demo" />
         <meta
           property="og:image"
-          content="https://www.tpisoftware.com/tpu/File/onlineResource/articles/1244/titlePageImg.jpg"
+          content="https://spotify-bgxu39ayj-tsengyushiang.vercel.app/resources/cover.png"
         />
+        <meta property="og:description" content="spotify music library" />
       </Head>
       <Provider store={store}>
         <Component {...pageProps} />

@@ -6,7 +6,7 @@ import {
   fetchFeaturedPlaylists,
   setCurrentPlaylistId,
 } from "../../redux/actions/playlists";
-import { fetchTracks } from "../../redux/actions/tracks";
+import { fetchTracks, stopTrack } from "../../redux/actions/tracks";
 import PlaylistsBar from "./PlaylistsBar";
 import Tracks from "./Tracks";
 
@@ -22,10 +22,10 @@ const MusicLibrary = () => {
   };
 
   const dispatch = useDispatch();
-  const { playlists, currentPlaylistId } = useSelector(
+  const { playlists, currentPlaylistId, ...playlistsStatus } = useSelector(
     (state) => state.playlists,
   );
-  const { tracks } = useSelector((state) => state.tracks);
+  const { tracks, ...trackStatus } = useSelector((state) => state.tracks);
 
   useEffect(() => {
     dispatch(fetchFeaturedPlaylists());
@@ -34,14 +34,18 @@ const MusicLibrary = () => {
   useEffect(() => {
     const id = playlists?.items[0]?.id;
     dispatch(setCurrentPlaylistId(id));
+    dispatch(stopTrack());
   }, [playlists]);
 
   useEffect(() => {
     dispatch(fetchTracks(currentPlaylistId));
   }, [currentPlaylistId]);
-  const onTabClick = (id) => {
+
+  const onTabClickFactory = (id) => {
     return () => {
+      if (id === currentPlaylistId) return;
       dispatch(setCurrentPlaylistId(id));
+      dispatch(stopTrack());
     };
   };
 
@@ -51,10 +55,11 @@ const MusicLibrary = () => {
       <PlaylistsBar
         items={playlists?.items}
         currentId={currentPlaylistId}
-        onClick={onTabClick}
+        onClickFactory={onTabClickFactory}
         filterIcon={filterIcon}
+        {...playlistsStatus}
       ></PlaylistsBar>
-      <Tracks items={tracks}></Tracks>
+      <Tracks items={tracks} {...trackStatus}></Tracks>
       <More>{more}</More>
     </Wrapper>
   );

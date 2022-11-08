@@ -9,16 +9,7 @@ export const Wrapper = styled.div`
   padding: 28px;
 `;
 export const Logo = styled(Icon)``;
-export const WrapperMenu = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  align-items: center;
 
-  ${ISTABLET} {
-    display: none;
-  }
-`;
 export const Item = styled.div`
   font-family: "Poppins";
   font-style: normal;
@@ -30,33 +21,83 @@ export const Item = styled.div`
   font-feature-settings: "salt" on, "liga" off;
   color: #ffffff;
 
-  padding: 0px 36px;
+  padding: 8px 36px;
+  width: 100%;
+  text-align: left;
+
+  ${ISTABLET} {
+    padding: 8px 0px;
+    align-self: flex-start;
+    color: #000000;
+  }
 `;
 
-export const Login = styled.div`
-  font-family: "Poppins";
-  font-style: normal;
+export const CloseMenu = styled(Item)`
+  display: none;
+  padding: 10px 10px 0px 0px;
+  width: auto;
+  &:after {
+    content: "X";
+  }
+  ${ISTABLET} {
+    display: block;
+    align-self: flex-end;
+  }
+`;
+export const Login = styled(Item)`
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
-  text-align: center;
   letter-spacing: -0.01em;
-  font-feature-settings: "salt" on, "liga" off;
-  color: #ffffff;
 
   background: #0432df;
   border: 1px solid #0432df;
   border-radius: 8px;
   padding: 10px 20px;
 
+  width: auto;
+
   ${ISTABLET} {
-    display: none;
+    color: #ffffff;
   }
 `;
-export const LiteMenu = styled(Icon)`
-  display: none;
+
+export const ItemContainer = styled.div`
+  display: flex;
+  flex-direction: row;
   margin-left: auto;
 
+  ${ISTABLET} {
+    display: none;
+    position: absolute;
+    right: 30px;
+    flex-direction: column;
+    background: white;
+  }
+`;
+
+export const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  ${ISTABLET} {
+    flex-direction: column;
+  }
+`;
+
+export const DropDownMenu = styled.div`
+  margin-left: auto;
+
+  &:focus-within {
+    > ${ItemContainer} {
+      display: flex;
+    }
+  }
+`;
+
+export const LiteMenu = styled(Icon)`
+  display: none;
   ${ISTABLET} {
     display: block;
   }

@@ -1,3 +1,4 @@
+import AudioPlayer from "../AudioPlayer";
 import {
   Wrapper,
   NameWrapper,
@@ -5,7 +6,6 @@ import {
   MusicTime,
   AlbumName,
   ArtistName,
-  IconMusic,
   IconWrapper,
   IconLike,
   IconDownload,
@@ -33,10 +33,17 @@ const iconOptions = {
   height: "36px",
 };
 
-const Track = ({ track }) => {
+const Track = ({ track, play, isPlaying, stop }) => {
   return (
     <Wrapper>
-      <IconMusic {...iconMusic} />
+      <AudioPlayer
+        src={track?.preview_url}
+        icon={iconMusic}
+        isPlaying={isPlaying}
+        play={play}
+        stop={stop}
+        name={track?.name}
+      />
       <NameWrapper>
         <MusicName>{track?.name}</MusicName>
         <MusicTime>{track?.duration_ms}</MusicTime>

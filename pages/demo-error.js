@@ -1,7 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import * as cookie from "../helper/cookie";
-import getSpotifyToken from "../api/token";
 
 import Header from "../containers/Header";
 import Banner from "../containers/Banner";
@@ -44,22 +43,9 @@ export async function getStaticProps({ locale }) {
     "footer",
   ]);
 
-  try {
-    const token = await getSpotifyToken(
-      process.env.SPOTIFY_CLIENT_ID,
-      process.env.SPOTIFY_CLIENT_SECRET,
-    );
-    return {
-      props: {
-        ...languges,
-        token,
-      },
-    };
-  } catch {
-    const error = {
-      message:
-        "Server-side get token error. Check your id and serect in .env file.",
-    };
-    return { props: { ...languges, error } };
-  }
+  const error = {
+    message:
+      "Server-side get token error. Check your id and serect in .env file.",
+  };
+  return { props: { ...languges, error } };
 }

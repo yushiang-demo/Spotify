@@ -10,22 +10,23 @@
     - [X] documents
 
 - CSS Layouts
-    - [ ] Header
-    - [ ] Banner
-    - [ ] Musics
-    - [ ] Categories
-    - [ ] Why us
-    - [ ] Plan
-    - [ ] User experience
-    - [ ] Footer
+    - [X] Header
+    - [X] Banner
+    - [X] Musics
+    - [X] Categories
+    - [X] Why us
+    - [X] Plan
+    - [X] User experience
+    - [X] Footer
+    - [ ] Error/Loading
 
 - Functions
-    - [ ] Spotify API
-    - [ ] Show categories
-    - [ ] Show musics
-    - [ ] Change category
-    - [ ] Music preview
-    - [ ] Dribbble cover
+    - [X] Spotify API
+    - [X] Show categories
+    - [X] Show musics
+    - [X] Change category
+    - [X] Music preview
+    - [X] Dribbble cover
 
 ## Gantt
 
@@ -38,7 +39,7 @@ gantt
     project setup   :a1, 2022-11-01, 1d
 
     section Functions
-        Spotify API         :c1, after a1  , 1d
+        Spotify API         :c1, 2022-11-01  , 1d
 
         Show categories             :c2, after c1  , 1d
         Show musics                 :c3, after c2  , 1d
@@ -55,6 +56,7 @@ gantt
         Header                                      :b3, after b2  , 1d
         Footer                                      :b7, after b2  , 1d
         User experience                             :b8, after b2  , 1d
+        Error/Loading                               :b9, after b3  , 1d
 
 
     section enhance

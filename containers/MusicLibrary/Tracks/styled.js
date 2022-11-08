@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { ISPHONE, ISTABLET } from "../../../styles/RWD";
+import { Status } from "../../../styles/Status";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Status)`
   display: flex;
   flex-direction: column;
   overflow: hidden;
