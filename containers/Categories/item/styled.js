@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
-import { ISPHONE } from "../../../styles/RWD";
+
+import { ISMOBILE } from "../../../styles/RWD";
 
 export const Wrapper = styled.div`
   background-color: gray;
@@ -25,7 +26,7 @@ export const Text = styled.div`
   letter-spacing: -0.05em;
   color: #eeeeee;
   padding: 15%;
-  ${ISPHONE} {
+  ${ISMOBILE} {
     font-size: 16px;
   }
 `;

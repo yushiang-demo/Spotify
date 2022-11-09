@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { ISTABLET, ISPHONE } from "../../styles/RWD";
+import { ISMOBILE, ISTABLET } from "../../styles/RWD";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ export const Title = styled.div`
     font-size: 28px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     padding: 50px 20px 0px 20px;
     font-weight: 600;
     font-size: 24px;
@@ -45,7 +45,7 @@ export const Subtitle = styled.div`
     padding-top: 12px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     font-size: 16px;
 
     padding-top: 8px;
@@ -65,7 +65,7 @@ export const PlanWrapper = styled.div`
     padding-bottom: 30px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     gap: 20px;
     padding-top: 40px;
     padding-bottom: 24px;
@@ -83,7 +83,7 @@ export const Footer = styled.div`
     padding-bottom: 60px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     font-size: 16px;
 
     padding-bottom: 50px;

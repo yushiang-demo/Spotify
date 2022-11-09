@@ -1,10 +1,11 @@
-import { takeEvery, put, call } from "redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
+
+import getCategories from "../../api/categories";
 import {
   ACTION_GET_CATEGORIES,
-  ACTION_GET_CATEGORIES_SUC,
   ACTION_GET_CATEGORIES_FAL,
+  ACTION_GET_CATEGORIES_SUC,
 } from "../../constatnts/categories";
-import getCategories from "../../api/categories";
 
 function* fetchCategories() {
   const payload = yield call(getCategories);

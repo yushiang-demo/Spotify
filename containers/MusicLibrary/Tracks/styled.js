@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ISPHONE, ISTABLET } from "../../../styles/RWD";
+
+import { ISMOBILE, ISTABLET } from "../../../styles/RWD";
 import { Status } from "../../../styles/Status";
 
 export const Wrapper = styled(Status)`
@@ -14,7 +15,7 @@ export const Wrapper = styled(Status)`
     height: 420px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     height: 360px;
   }
 `;

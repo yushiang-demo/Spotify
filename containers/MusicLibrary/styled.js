@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ISPHONE, ISTABLET } from "../../styles/RWD";
+
+import { ISMOBILE, ISTABLET } from "../../styles/RWD";
 
 export const Title = styled.div`
   font-weight: 600;
@@ -29,7 +30,7 @@ export const Wrapper = styled.div`
     padding: 50px 60px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     padding: 80px 17px;
   }
 `;

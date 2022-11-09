@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ISTABLET, ISPHONE } from "../../styles/RWD";
+
+import { ISMOBILE, ISTABLET } from "../../styles/RWD";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -24,7 +25,7 @@ export const Subtitle = styled.div`
   color: #020d37;
   padding: 10px;
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     font-size: 20px;
   }
 `;
@@ -41,7 +42,7 @@ export const TestimonialsWrapper = styled.div`
     width: 644px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     width: 287px;
   }
 `;

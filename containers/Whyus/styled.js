@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ISPHONE, ISTABLET } from "../../styles/RWD";
+
+import { ISMOBILE, ISTABLET } from "../../styles/RWD";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -25,7 +26,7 @@ export const TitleWrapper = styled.div`
     margin-right: auto;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     padding: 0px 28px 55px 28px;
   }
 `;
@@ -43,7 +44,7 @@ export const ItemsWrapper = styled.div`
     margin: 0px 99px 0px 83px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     margin: 0px 37px 0px 37px;
     justify-content: center;
   }

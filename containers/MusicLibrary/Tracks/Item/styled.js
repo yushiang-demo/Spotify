@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ISPHONE, ISTABLET } from "../../../../styles/RWD";
+
+import { ISMOBILE, ISTABLET } from "../../../../styles/RWD";
 import { Icon } from "../../..//../styles/Icon";
 
 export const Wrapper = styled.div`
@@ -68,7 +69,7 @@ export const ArtistName = styled.div`
   ${ISTABLET} {
     font-size: 14px;
   }
-  ${ISPHONE} {
+  ${ISMOBILE} {
     display: none;
   }
 `;
@@ -81,7 +82,7 @@ export const IconWrapper = styled.div`
 `;
 
 export const IconLike = styled(Icon)`
-  ${ISPHONE} {
+  ${ISMOBILE} {
     display: none;
   }
 `;

@@ -1,15 +1,15 @@
 import AudioPlayer from "../AudioPlayer";
 import {
-  Wrapper,
-  NameWrapper,
-  MusicName,
-  MusicTime,
   AlbumName,
   ArtistName,
-  IconWrapper,
-  IconLike,
   IconDownload,
+  IconLike,
   IconOptions,
+  IconWrapper,
+  MusicName,
+  MusicTime,
+  NameWrapper,
+  Wrapper,
 } from "./styled";
 
 const iconMusic = {

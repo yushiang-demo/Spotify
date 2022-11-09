@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Wrapper } from "./styled";
-import Track from "./Item";
+
 import { playTrack, stopTrack } from "../../../redux/actions/tracks";
+import Track from "./Item";
+import { Wrapper } from "./styled";
 
 const Tracks = ({ items, isLoading, error }) => {
   const currentTrackId = useSelector((state) => state.tracks.currentTrackId);

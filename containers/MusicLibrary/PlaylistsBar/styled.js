@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
-import { ISPHONE, ISTABLET } from "../../../styles/RWD";
+
 import { Icon } from "../../../styles/Icon";
+import { ISMOBILE, ISTABLET } from "../../../styles/RWD";
 import { Status } from "../../../styles/Status";
 
 export const Wrapper = styled.div`
@@ -22,7 +23,7 @@ export const FilterText = styled.div`
   font-size: 14px;
   letter-spacing: -0.05em;
   padding: 11px;
-  ${ISPHONE} {
+  ${ISMOBILE} {
     display: none;
   }
 `;
@@ -39,7 +40,7 @@ export const PlayListWrapper = styled(Status)`
     width: 80%;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     width: 60%;
   }
 `;
@@ -66,7 +67,7 @@ export const Item = styled.div`
     font-size: 14px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     width: 31.333%; /* fit 3 items*/
     font-size: 14px;
   }

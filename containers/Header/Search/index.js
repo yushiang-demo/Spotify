@@ -1,9 +1,9 @@
 import {
-  Wrapper,
+  SearchBoxWrapper,
+  SearchHint,
   SearchIcon,
   TextInput,
-  SearchHint,
-  SearchBoxWrapper,
+  Wrapper,
 } from "./styled";
 
 const Search = ({ icon, placeHolder, hint }) => {

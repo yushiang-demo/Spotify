@@ -1,12 +1,13 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Header from "../containers/Header";
+
 import Banner from "../containers/Banner";
-import MusicLibrary from "../containers/MusicLibrary";
 import Categories from "../containers/Categories";
-import Whyus from "../containers/Whyus";
-import Plan from "../containers/Plan";
 import Experiences from "../containers/Experiences";
 import Footer from "../containers/Footer";
+import Header from "../containers/Header";
+import MusicLibrary from "../containers/MusicLibrary";
+import Plan from "../containers/Plan";
+import Whyus from "../containers/Whyus";
 
 export default function App() {
   return (

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
-import { ISPHONE, ISTABLET } from "../../styles/RWD";
+
+import { ISMOBILE, ISTABLET } from "../../styles/RWD";
 
 export const Wrapper = styled.div`
   background-color: #fafafa;
@@ -19,7 +20,7 @@ export const Title = styled.div`
     padding: 0px 0px 35px 0px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     padding: 0px 0px 35px 0px;
   }
 `;
@@ -36,7 +37,7 @@ export const Icon = styled.div`
   ${ISTABLET} {
     margin: 22px 20px 22px 20px;
   }
-  ${ISPHONE} {
+  ${ISMOBILE} {
     margin: 22px 17px 22px 17px;
   }
 

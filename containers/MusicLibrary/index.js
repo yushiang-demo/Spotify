@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Title, More, Wrapper } from "./styled";
+
 import {
   fetchFeaturedPlaylists,
   setCurrentPlaylistId,
@@ -9,6 +9,7 @@ import {
 import { fetchTracks, stopTrack } from "../../redux/actions/tracks";
 import PlaylistsBar from "./PlaylistsBar";
 import Tracks from "./Tracks";
+import { More, Title, Wrapper } from "./styled";
 
 const MusicLibrary = () => {
   const { t } = useTranslation("musicLibrary");

@@ -1,4 +1,5 @@
-import { Wrapper, Comma, Message, Photo, Name, JobTilte } from "./styled";
+import { Comma, JobTilte, Message, Name, Photo, Wrapper } from "./styled";
+
 const Post = ({ message, name, jobTitle, photo, icon }) => {
   return (
     <Wrapper>

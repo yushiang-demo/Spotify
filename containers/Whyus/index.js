@@ -1,8 +1,8 @@
 import { useTranslation } from "next-i18next";
 
-import { Wrapper, TitleWrapper, ItemsWrapper } from "./styled";
-import WhyusTitle from "./title";
 import WhyusItem from "./item";
+import { ItemsWrapper, TitleWrapper, Wrapper } from "./styled";
+import WhyusTitle from "./title";
 
 const loadContent = () => {
   const { t } = useTranslation("whyus");

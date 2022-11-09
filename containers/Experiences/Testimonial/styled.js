@@ -1,6 +1,7 @@
 import styled from "styled-components";
+
 import { Icon } from "../../../styles/Icon";
-import { ISTABLET, ISPHONE } from "../../../styles/RWD";
+import { ISMOBILE, ISTABLET } from "../../../styles/RWD";
 
 export const Wrapper = styled.div`
   background: #ffffff;
@@ -21,7 +22,7 @@ export const Wrapper = styled.div`
     width: calc(50% - 30px);
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     width: calc(100% - 30px);
   }
 `;

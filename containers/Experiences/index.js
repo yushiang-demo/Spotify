@@ -1,13 +1,14 @@
 import { useTranslation } from "next-i18next";
+
+import Testimonial from "./Testimonial";
 import {
-  Wrapper,
-  Title,
+  Dot,
+  DotWrapper,
   Subtitle,
   TestimonialsWrapper,
-  DotWrapper,
-  Dot,
+  Title,
+  Wrapper,
 } from "./styled";
-import Testimonial from "./Testimonial";
 
 const loadContent = () => {
   const { t } = useTranslation("experiences");

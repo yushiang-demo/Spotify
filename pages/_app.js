@@ -1,8 +1,9 @@
 import { appWithTranslation } from "next-i18next";
-import { Provider } from "react-redux";
 import Head from "next/head";
-import "../styles/body.css";
+import { Provider } from "react-redux";
+
 import store from "../config/configureStore";
+import "../styles/body.css";
 
 function MyApp({ Component, pageProps }) {
   return (

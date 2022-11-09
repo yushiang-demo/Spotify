@@ -1,12 +1,13 @@
-import { takeEvery, put, call } from "redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
+
+import getFeaturedPlaylists from "../../api/featuredPlaylists";
+import getPlaylist from "../../api/playlist";
 import {
   ACTION_GET_FEATURED_PLAYLISTS,
   ACTION_GET_PLAYLISTS_BY_ID,
-  ACTION_GET_PLAYLISTS_SUC,
   ACTION_GET_PLAYLISTS_FAL,
+  ACTION_GET_PLAYLISTS_SUC,
 } from "../../constatnts/playlists";
-import getFeaturedPlaylists from "../../api/featuredPlaylists";
-import getPlaylist from "../../api/playlist";
 
 function* fetchFeaturedPlaylists() {
   const payload = yield call(getFeaturedPlaylists);

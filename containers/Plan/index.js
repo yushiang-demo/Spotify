@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
-import PlanItem from "./item";
 
-import { Wrapper, Footer, PlanWrapper, Subtitle, Title } from "./styled";
+import PlanItem from "./item";
+import { Footer, PlanWrapper, Subtitle, Title, Wrapper } from "./styled";
 
 const loadContent = () => {
   const { t } = useTranslation("plan");

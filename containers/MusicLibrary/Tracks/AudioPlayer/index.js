@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+
 import { IconMusic } from "./styled";
 
 const AudioSrc = ({ src, onEnded }) => {

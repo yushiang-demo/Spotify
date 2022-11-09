@@ -1,4 +1,4 @@
-import { Title, Subtitle } from "./styled";
+import { Subtitle, Title } from "./styled";
 
 const WhyusTitle = ({ title, subtitle }) => {
   return (

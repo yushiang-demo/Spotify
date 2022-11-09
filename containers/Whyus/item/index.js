@@ -1,4 +1,4 @@
-import { Wrapper, Icon, Title, Content, ItemsWrapper } from "./styled";
+import { Content, Icon, ItemsWrapper, Title, Wrapper } from "./styled";
 
 const WhyusItem = ({ icon, title, content }) => {
   return (

@@ -1,8 +1,9 @@
 import produce from "immer";
+
 import {
   ACTION_GET_TRACKS,
-  ACTION_GET_TRACKS_SUC,
   ACTION_GET_TRACKS_FAL,
+  ACTION_GET_TRACKS_SUC,
   ACTION_SET_PLAYING_ID,
 } from "../../constatnts/tracks";
 

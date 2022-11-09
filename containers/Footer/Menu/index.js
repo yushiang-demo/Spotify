@@ -1,4 +1,4 @@
-import { Title, Wrapper, Item } from "./styled";
+import { Item, Title, Wrapper } from "./styled";
 
 const Menu = (menu) => {
   return (

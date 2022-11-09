@@ -1,14 +1,15 @@
 import { useTranslation } from "next-i18next";
-import {
-  Wrapper,
-  Title,
-  Subtitle,
-  Footer,
-  SeeMusic,
-  DescroptionsWrapper,
-} from "./styled";
+
 import Menu from "./Menu";
 import Search from "./Search";
+import {
+  DescroptionsWrapper,
+  Footer,
+  SeeMusic,
+  Subtitle,
+  Title,
+  Wrapper,
+} from "./styled";
 
 const loadContent = () => {
   const { t } = useTranslation("header");

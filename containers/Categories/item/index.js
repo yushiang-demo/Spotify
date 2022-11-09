@@ -1,4 +1,4 @@
-import { Wrapper, Text } from "./styled";
+import { Text, Wrapper } from "./styled";
 
 const Category = ({ icons, name, id, onClick }) => {
   return (

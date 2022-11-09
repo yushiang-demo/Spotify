@@ -1,16 +1,17 @@
 import { useTranslation } from "next-i18next";
-import {
-  Title,
-  Wrapper,
-  More,
-  CategoriesWrapper,
-  KeepRatioWrapper,
-} from "./styled";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { fetchCategories } from "../../redux/actions/categories";
 import { fetchPlaylistsById } from "../../redux/actions/playlists";
 import Category from "./item";
+import {
+  CategoriesWrapper,
+  KeepRatioWrapper,
+  More,
+  Title,
+  Wrapper,
+} from "./styled";
 
 const Categories = ({ visibleCount = 12 }) => {
   const { t } = useTranslation("categories");
@@ -46,8 +47,6 @@ const Categories = ({ visibleCount = 12 }) => {
                     onClick={onClick}
                   />
                 );
-              } else {
-                return null;
               }
             })}
         </CategoriesWrapper>

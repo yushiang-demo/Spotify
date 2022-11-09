@@ -1,11 +1,12 @@
 import styled, { css } from "styled-components";
-import { ISPHONE } from "../../../styles/RWD";
+
+import { ISMOBILE } from "../../../styles/RWD";
 
 export const Wrapper = styled.div`
   width: 50%;
   padding-bottom: 61px;
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     width: 100%;
     padding-bottom: 31px;
   }

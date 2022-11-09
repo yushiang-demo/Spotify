@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
-import { Wrapper, Title, Icon, IconWrapper } from "./styled";
+
+import { Icon, IconWrapper, Title, Wrapper } from "./styled";
 
 const loadContent = () => {
   const { t } = useTranslation("banner");

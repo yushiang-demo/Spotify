@@ -1,10 +1,11 @@
-import { takeEvery, put, call } from "redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
+
+import getTracks from "../../api/tracks";
 import {
   ACTION_GET_TRACKS,
-  ACTION_GET_TRACKS_SUC,
   ACTION_GET_TRACKS_FAL,
+  ACTION_GET_TRACKS_SUC,
 } from "../../constatnts/tracks";
-import getTracks from "../../api/tracks";
 
 function* fetchTracks({ playlistId }) {
   if (!playlistId) return;

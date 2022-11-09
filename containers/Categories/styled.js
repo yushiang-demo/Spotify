@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ISTABLET, ISPHONE } from "../../styles/RWD";
+
+import { ISMOBILE, ISTABLET } from "../../styles/RWD";
 import { Status } from "../../styles/Status";
 
 export const Wrapper = styled.div`
@@ -12,7 +13,7 @@ export const Wrapper = styled.div`
     padding: 60px 60px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     padding: 60px 16px;
   }
 `;
@@ -29,7 +30,7 @@ export const Title = styled.div`
     padding-bottom: 20px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     font-size: 20px;
     padding-bottom: 20px;
   }
@@ -44,7 +45,7 @@ export const KeepRatioWrapper = styled.div`
     padding-top: 75%; /* 4:3 Aspect Ratio */
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     padding-top: 300%; /* 2:6 Aspect Ratio */
   }
 `;
@@ -65,7 +66,7 @@ export const CategoriesWrapper = styled(Status)`
     grid-template-columns: auto auto auto auto;]
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     grid-template-columns: auto auto;
   }
 `;
@@ -83,7 +84,7 @@ export const More = styled.div`
     padding-top: 15px;
   }
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     padding-top: 15px;
   }
 `;

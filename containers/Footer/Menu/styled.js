@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ISPHONE, ISTABLET } from "../../../styles/RWD";
+
+import { ISMOBILE, ISTABLET } from "../../../styles/RWD";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ export const Wrapper = styled.div`
 
   padding: 17px 0px;
 
-  ${ISPHONE} {
+  ${ISMOBILE} {
     width: 50%;
   }
 `;

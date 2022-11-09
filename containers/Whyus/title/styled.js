@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { ISTABLET } from "../../../styles/RWD";
 
 export const Title = styled.div`

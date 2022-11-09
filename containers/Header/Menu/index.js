@@ -1,13 +1,13 @@
 import {
-  Wrapper,
-  Logo,
+  CloseMenu,
   DropDownMenu,
+  Item,
   ItemsWrapper,
   LinksWrapper,
-  Item,
   LiteMenu,
   Login,
-  CloseMenu,
+  Logo,
+  Wrapper,
 } from "./styled";
 
 const Menu = ({ logo, items, liteModeIcon, login }) => {

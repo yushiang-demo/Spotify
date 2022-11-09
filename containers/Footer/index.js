@@ -1,13 +1,14 @@
 import { useTranslation } from "next-i18next";
-import {
-  Wrapper,
-  DescriptionsWrapper,
-  MenusWrapper,
-  Logo,
-  Introduction,
-  CopyRight,
-} from "./styled";
+
 import Menu from "./Menu";
+import {
+  CopyRight,
+  DescriptionsWrapper,
+  Introduction,
+  Logo,
+  MenusWrapper,
+  Wrapper,
+} from "./styled";
 
 const loadContent = () => {
   const { t } = useTranslation("footer");

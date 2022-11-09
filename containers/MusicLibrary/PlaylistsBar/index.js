@@ -1,10 +1,10 @@
 import {
-  Wrapper,
+  FilterIcon,
+  FilterText,
+  FilterWrapper,
   Item,
   PlayListWrapper,
-  FilterText,
-  FilterIcon,
-  FilterWrapper,
+  Wrapper,
 } from "./styled";
 
 const PlaylistsBar = ({
