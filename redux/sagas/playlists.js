@@ -5,13 +5,11 @@ import {
   ACTION_GET_PLAYLISTS_SUC,
   ACTION_GET_PLAYLISTS_FAL,
 } from "../../constatnts/playlists";
-import * as cookie from "../../helper/cookie";
 import getFeaturedPlaylists from "../../api/featuredPlaylists";
 import getPlaylist from "../../api/playlist";
 
 function* fetchFeaturedPlaylists() {
-  const token = cookie.getToken();
-  const payload = yield call(getFeaturedPlaylists, token);
+  const payload = yield call(getFeaturedPlaylists);
 
   if (payload?.error) {
     const type = ACTION_GET_PLAYLISTS_FAL;
@@ -24,8 +22,7 @@ function* fetchFeaturedPlaylists() {
 }
 
 function* fetchPlaylistsById({ categoryId }) {
-  const token = cookie.getToken();
-  const payload = yield call(getPlaylist, { token, categoryId });
+  const payload = yield call(getPlaylist, { categoryId });
 
   if (payload?.error) {
     const type = ACTION_GET_PLAYLISTS_FAL;

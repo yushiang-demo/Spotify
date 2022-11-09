@@ -4,14 +4,12 @@ import {
   ACTION_GET_TRACKS_SUC,
   ACTION_GET_TRACKS_FAL,
 } from "../../constatnts/tracks";
-import * as cookie from "../../helper/cookie";
 import getTracks from "../../api/tracks";
 
 function* fetchTracks({ playlistId }) {
   if (!playlistId) return;
 
-  const token = cookie.getToken();
-  const payload = yield call(getTracks, { token, playlistId });
+  const payload = yield call(getTracks, { playlistId });
 
   if (payload?.error) {
     const type = ACTION_GET_TRACKS_FAL;

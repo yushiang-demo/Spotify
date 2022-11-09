@@ -1,13 +1,10 @@
-const getTracks = async ({ token, playlistId }) => {
-  const url = `https://api.spotify.com/v1/playlists/${playlistId}/tracks`;
-  const option = {
-    headers: {
-      Authorization: "Bearer " + token,
-    },
-  };
+import { invokeApi } from "../helper/apiHelper";
 
-  const response = await fetch(url, option);
-  return await response.json();
+const getTracks = async ({ playlistId }) => {
+  const param = {
+    url: `https://api.spotify.com/v1/playlists/${playlistId}/tracks`,
+  };
+  return invokeApi(param);
 };
 
 export default getTracks;

@@ -1,28 +1,38 @@
-import getSpotifyToken from "../api/token";
-import { ErrorBox } from "../styles/Error";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Header from "../containers/Header";
+import Banner from "../containers/Banner";
+import MusicLibrary from "../containers/MusicLibrary";
+import Categories from "../containers/Categories";
+import Whyus from "../containers/Whyus";
+import Plan from "../containers/Plan";
+import Experiences from "../containers/Experiences";
+import Footer from "../containers/Footer";
 
-export default function App({ error }) {
-  return <ErrorBox {...error} />;
+export default function App() {
+  return (
+    <>
+      <Header />
+      <Banner />
+      <MusicLibrary />
+      <Categories />
+      <Whyus />
+      <Plan />
+      <Experiences />
+      <Footer />
+    </>
+  );
 }
 
-export async function getServerSideProps() {
-  try {
-    const token = await getSpotifyToken(
-      process.env.SPOTIFY_CLIENT_ID,
-      process.env.SPOTIFY_CLIENT_SECRET,
-    );
-    console.log(token);
-    return {
-      redirect: {
-        permanent: false,
-        destination: `/demo?token=${token}`,
-      },
-    };
-  } catch {
-    const error = {
-      message:
-        "Server-side get token error. Check your id and serect in .env file.",
-    };
-    return { props: { error } };
-  }
+export async function getStaticProps({ locale }) {
+  const languges = await serverSideTranslations(locale, [
+    "header",
+    "banner",
+    "musicLibrary",
+    "categories",
+    "whyus",
+    "plan",
+    "experiences",
+    "footer",
+  ]);
+  return { props: { ...languges } };
 }
