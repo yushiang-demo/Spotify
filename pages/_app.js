@@ -3,7 +3,6 @@ import Head from "next/head";
 import { Provider } from "react-redux";
 
 import store from "../config/configureStore";
-import "../styles/body.css";
 
 function MyApp({ Component, pageProps }) {
   return (
