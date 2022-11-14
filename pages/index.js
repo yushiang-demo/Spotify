@@ -6,13 +6,12 @@ import Experiences from "../containers/Experiences";
 import Footer from "../containers/Footer";
 import Header from "../containers/Header";
 import MusicLibrary from "../containers/MusicLibrary";
-import PageWrapper from "../containers/PageWrapper";
 import Plan from "../containers/Plan";
 import Whyus from "../containers/Whyus";
 
 export default function App() {
   return (
-    <PageWrapper>
+    <>
       <Header />
       <Banner />
       <MusicLibrary />
@@ -21,7 +20,7 @@ export default function App() {
       <Plan />
       <Experiences />
       <Footer />
-    </PageWrapper>
+    </>
   );
 }
 

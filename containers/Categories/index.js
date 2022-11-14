@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { fetchCategories } from "../../redux/actions/categories";
 import { fetchPlaylistsById } from "../../redux/actions/playlists";
+import { RWDContentWrapper } from "../../styles/RWD";
 import Category from "./item";
 import {
   CategoriesWrapper,
@@ -33,26 +34,31 @@ const Categories = ({ visibleCount = 12 }) => {
   };
 
   return (
-    <Wrapper>
-      <Title>{title}</Title>
-      <KeepRatioWrapper>
-        <CategoriesWrapper isLoading={isLoading} errorMessage={error?.message}>
-          {categories?.items &&
-            [...Array(visibleCount)].map((_, index) => {
-              if (categories?.items[index]) {
-                return (
-                  <Category
-                    key={index}
-                    {...categories?.items[index]}
-                    onClick={onClick}
-                  />
-                );
-              }
-            })}
-        </CategoriesWrapper>
-      </KeepRatioWrapper>
-      <More>{more}</More>
-    </Wrapper>
+    <RWDContentWrapper>
+      <Wrapper>
+        <Title>{title}</Title>
+        <KeepRatioWrapper>
+          <CategoriesWrapper
+            isLoading={isLoading}
+            errorMessage={error?.message}
+          >
+            {categories?.items &&
+              [...Array(visibleCount)].map((_, index) => {
+                if (categories?.items[index]) {
+                  return (
+                    <Category
+                      key={index}
+                      {...categories?.items[index]}
+                      onClick={onClick}
+                    />
+                  );
+                }
+              })}
+          </CategoriesWrapper>
+        </KeepRatioWrapper>
+        <More>{more}</More>
+      </Wrapper>
+    </RWDContentWrapper>
   );
 };
 

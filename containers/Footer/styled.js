@@ -3,8 +3,11 @@ import styled from "styled-components";
 import { Icon } from "../../styles/Icon";
 import { ISMOBILE, ISTABLET } from "../../styles/RWD";
 
-export const Wrapper = styled.div`
+export const Background = styled.div`
   background-color: #020d37;
+`;
+
+export const Wrapper = styled.div`
   display: flex;
 
   ${ISTABLET} {

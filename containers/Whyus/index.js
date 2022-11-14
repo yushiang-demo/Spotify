@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
 
+import { RWDContentWrapper } from "../../styles/RWD";
 import WhyusItem from "./item";
 import { ItemsWrapper, TitleWrapper, Wrapper } from "./styled";
 import WhyusTitle from "./title";
@@ -38,16 +39,18 @@ const loadContent = () => {
 const Whyus = () => {
   const { title, items } = loadContent();
   return (
-    <Wrapper>
-      <TitleWrapper>
-        <WhyusTitle {...title}></WhyusTitle>
-      </TitleWrapper>
-      <ItemsWrapper>
-        {items?.map((item, index) => (
-          <WhyusItem key={index} {...item} />
-        ))}
-      </ItemsWrapper>
-    </Wrapper>
+    <RWDContentWrapper>
+      <Wrapper>
+        <TitleWrapper>
+          <WhyusTitle {...title}></WhyusTitle>
+        </TitleWrapper>
+        <ItemsWrapper>
+          {items?.map((item, index) => (
+            <WhyusItem key={index} {...item} />
+          ))}
+        </ItemsWrapper>
+      </Wrapper>
+    </RWDContentWrapper>
   );
 };
 

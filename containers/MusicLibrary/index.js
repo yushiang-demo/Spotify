@@ -7,6 +7,7 @@ import {
   setCurrentPlaylistId,
 } from "../../redux/actions/playlists";
 import { fetchTracks, stopTrack } from "../../redux/actions/tracks";
+import { RWDContentWrapper } from "../../styles/RWD";
 import PlaylistsBar from "./PlaylistsBar";
 import Tracks from "./Tracks";
 import { More, Title, Wrapper } from "./styled";
@@ -51,18 +52,20 @@ const MusicLibrary = () => {
   };
 
   return (
-    <Wrapper>
-      <Title>{title}</Title>
-      <PlaylistsBar
-        items={playlists?.items}
-        currentId={currentPlaylistId}
-        onClickFactory={onTabClickFactory}
-        filterIcon={filterIcon}
-        {...playlistsStatus}
-      />
-      <Tracks items={tracks} {...trackStatus} />
-      <More>{more}</More>
-    </Wrapper>
+    <RWDContentWrapper>
+      <Wrapper>
+        <Title>{title}</Title>
+        <PlaylistsBar
+          items={playlists?.items}
+          currentId={currentPlaylistId}
+          onClickFactory={onTabClickFactory}
+          filterIcon={filterIcon}
+          {...playlistsStatus}
+        />
+        <Tracks items={tracks} {...trackStatus} />
+        <More>{more}</More>
+      </Wrapper>
+    </RWDContentWrapper>
   );
 };
 

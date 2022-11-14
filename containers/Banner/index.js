@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
 
+import { RWDContentWrapper } from "../../styles/RWD";
 import { CompanyLogo, IconWrapper, Title, Wrapper } from "./styled";
 
 const loadContent = () => {
@@ -53,12 +54,14 @@ const Banner = () => {
 
   return (
     <Wrapper>
-      <Title>{title}</Title>
-      <IconWrapper>
-        {icons?.map((icon, index) => (
-          <CompanyLogo key={index} {...icon} />
-        ))}
-      </IconWrapper>
+      <RWDContentWrapper>
+        <Title>{title}</Title>
+        <IconWrapper>
+          {icons?.map((icon, index) => (
+            <CompanyLogo key={index} {...icon} />
+          ))}
+        </IconWrapper>
+      </RWDContentWrapper>
     </Wrapper>
   );
 };

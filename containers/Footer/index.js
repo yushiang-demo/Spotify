@@ -1,7 +1,9 @@
 import { useTranslation } from "next-i18next";
 
+import { RWDContentWrapper } from "../../styles/RWD";
 import Menu from "./Menu";
 import {
+  Background,
   CopyRight,
   DescriptionsWrapper,
   Introduction,
@@ -57,18 +59,22 @@ const loadContent = () => {
 const Footer = () => {
   const { descriptions, items } = loadContent();
   return (
-    <Wrapper>
-      <DescriptionsWrapper>
-        <Logo {...descriptions?.logo} />
-        <Introduction>{descriptions?.introduction}</Introduction>
-        <CopyRight>{descriptions?.copyRight}</CopyRight>
-      </DescriptionsWrapper>
-      <MenusWrapper>
-        {items?.map((item, index) => (
-          <Menu key={index} {...item} />
-        ))}
-      </MenusWrapper>
-    </Wrapper>
+    <Background>
+      <RWDContentWrapper>
+        <Wrapper>
+          <DescriptionsWrapper>
+            <Logo {...descriptions?.logo} />
+            <Introduction>{descriptions?.introduction}</Introduction>
+            <CopyRight>{descriptions?.copyRight}</CopyRight>
+          </DescriptionsWrapper>
+          <MenusWrapper>
+            {items?.map((item, index) => (
+              <Menu key={index} {...item} />
+            ))}
+          </MenusWrapper>
+        </Wrapper>
+      </RWDContentWrapper>
+    </Background>
   );
 };
 

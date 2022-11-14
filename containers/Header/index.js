@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
 
+import { RWDContentWrapper } from "../../styles/RWD";
 import Menu from "./Menu";
 import Search from "./Search";
 import {
@@ -78,16 +79,18 @@ const Header = () => {
   const { descriptions, menu, search } = loadContent();
   return (
     <Wrapper {...descriptions?.backgroundImage}>
-      <Menu {...menu} />
-      <DescroptionsWrapper>
-        <Title>{descriptions?.title}</Title>
-        <Subtitle>{descriptions?.subtitle}</Subtitle>
-        <Search {...search} />
-        <Footer>
-          {descriptions?.footer}
-          <SeeMusic>{descriptions?.seeMusic}</SeeMusic>
-        </Footer>
-      </DescroptionsWrapper>
+      <RWDContentWrapper>
+        <Menu {...menu} />
+        <DescroptionsWrapper>
+          <Title>{descriptions?.title}</Title>
+          <Subtitle>{descriptions?.subtitle}</Subtitle>
+          <Search {...search} />
+          <Footer>
+            {descriptions?.footer}
+            <SeeMusic>{descriptions?.seeMusic}</SeeMusic>
+          </Footer>
+        </DescroptionsWrapper>
+      </RWDContentWrapper>
     </Wrapper>
   );
 };
