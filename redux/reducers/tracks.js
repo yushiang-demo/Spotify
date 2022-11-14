@@ -5,7 +5,7 @@ import {
   ACTION_GET_TRACKS_FAL,
   ACTION_GET_TRACKS_SUC,
   ACTION_SET_PLAYING_ID,
-} from "../../constatnts/tracks";
+} from "../../constants/tracks";
 
 const initialState = {
   tracks: [],

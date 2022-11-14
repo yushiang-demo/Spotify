@@ -1,7 +1,7 @@
 import {
   ACTION_GET_TRACKS,
   ACTION_SET_PLAYING_ID,
-} from "../../constatnts/tracks";
+} from "../../constants/tracks";
 
 export const fetchTracks = (playlistId) => {
   return {

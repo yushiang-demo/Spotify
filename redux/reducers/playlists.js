@@ -6,7 +6,7 @@ import {
   ACTION_GET_PLAYLISTS_FAL,
   ACTION_GET_PLAYLISTS_SUC,
   ACTION_SET_CURRENT_PLAYLISTID,
-} from "../../constatnts/playlists";
+} from "../../constants/playlists";
 
 const initialState = {
   playlists: null,

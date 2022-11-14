@@ -4,7 +4,7 @@ import {
   ACTION_GET_CATEGORIES,
   ACTION_GET_CATEGORIES_FAL,
   ACTION_GET_CATEGORIES_SUC,
-} from "../../constatnts/categories";
+} from "../../constants/categories";
 
 const initialState = {
   categories: [],

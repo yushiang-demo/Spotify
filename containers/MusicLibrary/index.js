@@ -59,8 +59,8 @@ const MusicLibrary = () => {
         onClickFactory={onTabClickFactory}
         filterIcon={filterIcon}
         {...playlistsStatus}
-      ></PlaylistsBar>
-      <Tracks items={tracks} {...trackStatus}></Tracks>
+      />
+      <Tracks items={tracks} {...trackStatus} />
       <More>{more}</More>
     </Wrapper>
   );

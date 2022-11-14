@@ -5,7 +5,7 @@ import {
   ACTION_GET_CATEGORIES,
   ACTION_GET_CATEGORIES_FAL,
   ACTION_GET_CATEGORIES_SUC,
-} from "../../constatnts/categories";
+} from "../../constants/categories";
 
 function* fetchCategories() {
   const payload = yield call(getCategories);

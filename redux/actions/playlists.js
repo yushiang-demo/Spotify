@@ -2,7 +2,7 @@ import {
   ACTION_GET_FEATURED_PLAYLISTS,
   ACTION_GET_PLAYLISTS_BY_ID,
   ACTION_SET_CURRENT_PLAYLISTID,
-} from "../../constatnts/playlists";
+} from "../../constants/playlists";
 
 export const fetchFeaturedPlaylists = () => {
   return {

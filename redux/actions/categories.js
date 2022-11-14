@@ -1,4 +1,4 @@
-import { ACTION_GET_CATEGORIES } from "../../constatnts/categories";
+import { ACTION_GET_CATEGORIES } from "../../constants/categories";
 
 export const fetchCategories = () => {
   return {

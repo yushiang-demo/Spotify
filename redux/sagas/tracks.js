@@ -5,7 +5,7 @@ import {
   ACTION_GET_TRACKS,
   ACTION_GET_TRACKS_FAL,
   ACTION_GET_TRACKS_SUC,
-} from "../../constatnts/tracks";
+} from "../../constants/tracks";
 
 function* fetchTracks({ playlistId }) {
   if (!playlistId) return;

@@ -7,7 +7,7 @@ import {
   ACTION_GET_PLAYLISTS_BY_ID,
   ACTION_GET_PLAYLISTS_FAL,
   ACTION_GET_PLAYLISTS_SUC,
-} from "../../constatnts/playlists";
+} from "../../constants/playlists";
 
 function* fetchFeaturedPlaylists() {
   const payload = yield call(getFeaturedPlaylists);

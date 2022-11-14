@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next";
 
-import { Icon, IconWrapper, Title, Wrapper } from "./styled";
+import { CompanyLogo, IconWrapper, Title, Wrapper } from "./styled";
 
 const loadContent = () => {
   const { t } = useTranslation("banner");
@@ -56,7 +56,7 @@ const Banner = () => {
       <Title>{title}</Title>
       <IconWrapper>
         {icons?.map((icon, index) => (
-          <Icon key={index} {...icon} />
+          <CompanyLogo key={index} {...icon} />
         ))}
       </IconWrapper>
     </Wrapper>

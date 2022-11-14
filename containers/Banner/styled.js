@@ -1,5 +1,6 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
+import { Icon } from "../../styles/Icon";
 import { ISMOBILE, ISTABLET } from "../../styles/RWD";
 
 export const Wrapper = styled.div`
@@ -32,7 +33,7 @@ export const IconWrapper = styled.div`
   justify-content: center;
 `;
 
-export const Icon = styled.div`
+export const CompanyLogo = styled(Icon)`
   margin: 22px 45px 22px 45px;
   ${ISTABLET} {
     margin: 22px 20px 22px 20px;
@@ -40,20 +41,4 @@ export const Icon = styled.div`
   ${ISMOBILE} {
     margin: 22px 17px 22px 17px;
   }
-
-  ${(props) =>
-    props.url &&
-    css`
-      background-image: url("${props.url}");
-    `};
-  ${(props) =>
-    props.width &&
-    css`
-      width: ${props.width};
-    `};
-  ${(props) =>
-    props.height &&
-    css`
-      height: ${props.height};
-    `};
 `;
