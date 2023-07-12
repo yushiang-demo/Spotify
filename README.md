@@ -4,8 +4,8 @@
 
 
 ```
-SPOTIFY_CLIENT_ID=dd29e7bc9b2d4b18b25ae1e9bd167fab
-SPOTIFY_CLIENT_SECRET=ee2808f0584b4860accce6a44f08c2db
+SPOTIFY_CLIENT_ID=dd29e7bc9b2d4b18b25ae1e9bd167...
+SPOTIFY_CLIENT_SECRET=ee2808f0584b4860accce6a44f08c...
 ```
 
 - Install package and start dev environment with yarn.
